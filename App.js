@@ -1,30 +1,12 @@
-//import Libraries
+import {View, Text} from 'react-native'
+import React from 'react'
 
-import React from 'react';
+export default function App() {
+  const abc = 123
 
-//import third party
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-
-//import screens
-import Calculator from './src/Calculator';
-
-function App() {
-  const Stack = createStackNavigator();
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Calculator"
-          options={{
-            headerShown: false,
-          }}
-          component={Calculator}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+    <View>
+      <Text>{abc}</Text>
+    </View>
+  )
 }
-
-//make component available to app
-export default App;
